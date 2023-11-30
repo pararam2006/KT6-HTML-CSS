@@ -28,8 +28,7 @@
             width: 100%;
             /* height: 7vh; */
             border: 10px;
-            border: solid 2px;
-            border-color: black;
+
             padding-top: 40px;
             padding-bottom: 40px;
             
@@ -57,7 +56,8 @@
             left: 15%;
             right: 15%;
             width: 70%;
-            height: 20%;
+            height: 60%;
+            /* height: 15cm; */
         }
 
         .item {
@@ -74,9 +74,9 @@
             position: relative;
             /* width: 644px;
             height: 331px; */
-            width: 56%;
+            width: 55.5%;
             height: 550px;
-            left: calc((100% - 56%)/2);
+            left: calc((100% - 55.5%)/2);
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -173,6 +173,70 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+
+        .features {
+            border: solid 2px;
+            border-color: black;
+            position: relative;
+            width: 70%;
+            height: 40%;
+            left: 15%; 
+            margin-top: 120px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .newletters-container {
+            position: relative;
+            width: 45%;
+            height: 10%;
+            left: calc((100% - 45%)/2); 
+            margin-top: 120px;
+            padding-top: 60px;
+            padding-bottom: 55px;
+            background-image: url(https://htmldemo.net/trio/trio/assets/img/extra/newsletter-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .newletters-item h2{
+            margin-top: 0;
+            font-size: 40px;
+        }
+
+        .newletters-item {
+            margin-left: 26%;
+            justify-content: center;
+        }
+
+        .email-input {
+            width: 45%;
+            height: 60px;
+            font-size: 15px;
+            color: gray;
+        }
+        .email-button {
+            width: 18%;
+            height: 66px;
+            font-size: 15px;
+            color: aliceblue;
+            background-color: #fdc657;
+            font-weight: bold;
+            margin-left: -5px;
+        }
+
+        .features-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border: solid 2px;
+            border-color: black;
+        }
+
+        .features-figure-img {
+            width: 253px;
+            height: 332px;
+        }
     </style>
 </head>
 <body>
@@ -191,24 +255,46 @@
     <main>
         <div class="bigContent"></div>
         <div class="categoty-container">
-            <figure class="categoty-banner-short"><img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-1.jpg" alt="" srcset="">
+            <figure class="categoty-banner-short">
+                <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-1.jpg" alt="">
                 <figcaption class="figcaption-left">Light Up!<p></p>19 рублей</figcaption>
             </figure>
-            <figure class="categoty-banner-short"><img class="figure-img" src="	https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-2.jpg" alt="" srcset="">
+            <figure class="categoty-banner-short">
+                <img class="figure-img" src="	https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-2.jpg" alt="">
                 <figcaption class="figcaption-right">Hand Up!<p></p>19 рублей</figcaption>
             </figure>
-            <figure class="categoty-banner-long-sale"><img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-5.jpg" alt="" srcset="">
+            <figure class="categoty-banner-long-sale">
+                <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-5.jpg" alt="">
                 <figcaption class="figcaption-sale"><span class="sale-badge">50% Off</span></figcaption>
             </figure>
-            <figure class="categoty-banner-short"><img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-3.jpg" alt="" srcset="">
+            <figure class="categoty-banner-short">
+                <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-3.jpg" alt="">
                 <figcaption class="figcaption-right">Women Up!<p></p>19 рублей</figcaption>
             </figure>
-            <figure class="categoty-banner-short"><img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-4.jpg" alt="" srcset="">
+            <figure class="categoty-banner-short">
+                <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-4.jpg" alt="">
                 <figcaption class="figcaption-left">Wake Up!<p></p>19 рублей</figcaption>
                 <figcaption class="figcaption-sale1"><span class="sale-badge1">-30%</span></figcaption>
-
             </figure>
-            
+        </div>
+        <div class="features-container">
+            <div class="features-description"></div>
+            <figure>
+                <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-03.jpg" alt="">
+                <figcaption class="features-figure-figcaption">Bed lamp<p></p>19 рублей
+                </figcaption>
+            </figure></div>
+            <figure>
+                <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-04.jpg" alt="">
+                <figcaption class="features-figure-figcaption"> Bedroom decode<p></p>19 рублей</figcaption>
+            </figure></div>
+        </div>
+        <div class="newletters-container">
+            <div class="newletters-item">
+                <h2>Newslettets</h2>
+                <input type="text" value="Enter your emai address" class="email-input">
+                <input type="button" value="Subscribe" class="email-button">
+            </div>
         </div>
     </main>
 

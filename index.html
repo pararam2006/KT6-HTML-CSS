@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практическая №6 HTML</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
+        .bi {
+        padding-left: 41px;
+        color: #222222;
+        position: relative;
+        }
+
         html {
             height: 100%;
             width: 100%;
@@ -226,16 +233,117 @@
         }
 
         .features-container {
-            display: flex;
-            flex-direction: column;
+            display: inline-flex;
+            flex-direction: row;
             flex-wrap: wrap;
-            border: solid 2px;
-            border-color: black;
+            border: solid 0.5px;
+            border-color: grey;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-right: 60px;
+            padding-left: 60px;
+            margin-top: 120px;
+            margin-left: 26.5%;
         }
 
         .features-figure-img {
             width: 253px;
             height: 332px;
+        }
+        .features-imgs {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .features-description {
+            width: 253px;
+            height: 332px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .features-description h2{
+            display: inline;
+            margin-bottom: 0;
+        }
+
+        .button-purchase_theme {
+           color: aliceblue;
+           background-color: #fdc657;
+        }
+
+        .last-main  {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            padding-left: 20%;
+            padding-right: 20%;
+            margin-top: 100px ;
+        }
+
+        .grid-container {
+            display: grid;
+            width: 780px;
+            height: 1056px;
+            /* border: solid 2px;
+            border-color: black; */
+            grid-template-columns:repeat(3, 254px);
+            grid-template-rows: repeat(3, 351px);
+            grid-gap: 5px 5px;
+            margin-bottom: 50px;
+        }
+
+        .grid-item {
+            display: inline;
+            width: 253px;
+            height: 351px;
+            /* border: solid 1px;
+            border-color: black; */
+        }
+
+        .grid-item-figure-img {
+            width: 100%;
+            height: 100%;
+            padding-bottom: 5px;
+        }
+
+        .grid-item-figcaption p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .viewMoreProducts {
+           color: aliceblue;
+           background-color: #fdc657;
+           width: 775px;
+           height: 50px;
+           margin-bottom: 90px;
+        }
+
+        .button-viewMoreProducts {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: space-between;
+            height: 135px;
+            width: 100%;
+            background-color: gray;
+            margin-bottom: 0;
+        }
+
+        .div-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
@@ -249,6 +357,7 @@
             <div class="item">BLOG</div>
             <div class="item">PORTFOLIO</div>
             <div class="item">ELEMETS</div>
+            <i class="bi bi-cart-fill"></i>
         </div>
     </header>
 
@@ -278,16 +387,23 @@
             </figure>
         </div>
         <div class="features-container">
-            <div class="features-description"></div>
-            <figure>
-                <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-03.jpg" alt="">
-                <figcaption class="features-figure-figcaption">Bed lamp<p></p>19 рублей
-                </figcaption>
-            </figure></div>
-            <figure>
-                <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-04.jpg" alt="">
-                <figcaption class="features-figure-figcaption"> Bedroom decode<p></p>19 рублей</figcaption>
-            </figure></div>
+            <div class="features-description">
+                <h2>Features</h2>
+                Our interior and fabric is filled with thousands of brilliant designs that make your projects happen. We reupholster or create new furniture; measure, construct and install custom window treatments and slipcovers; upholster walls; create all of your bedding needs and more.
+                <button class="button-purchase_theme">Purchase theme</button>
+            </div>
+            <div class="features-imgs">
+                <figure>
+                    <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-03.jpg" alt="">
+                    <figcaption class="features-figure-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                </figure>
+           
+                <figure>
+                    <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-04.jpg" alt="">
+                    <figcaption class="features-figure-figcaption"> Bedroom decode<p></p>19 рублей</figcaption>
+                </figure>
+            </div>
+        </div>
         </div>
         <div class="newletters-container">
             <div class="newletters-item">
@@ -296,9 +412,102 @@
                 <input type="button" value="Subscribe" class="email-button">
             </div>
         </div>
+        <div class="last-main"> 
+            <div class="products-description">
+                <h1>Products</h1><p></p>Choose from our wide range of products to create your own amazing showcase.
+            </div> 
+            <div class="grid-container">
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-03.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                        
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-04.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                    
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-09.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                    
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-06.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                    
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img  class="grid-item-figure-img"src="https://htmldemo.net/trio/trio/assets/img/products/prod-01.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                    
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-02.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                    
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-02.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                    
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-03.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                    
+                <div class="grid-item">
+                    <figure class="grid-item-figure">
+                        <img class="grid-item-figure-img" src="	https://htmldemo.net/trio/trio/assets/img/products/prod-07.jpg" alt="">
+                        <figcaption class="grid-item-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    </figure>
+                </div>                                            
+            </div>
+        </div>
+        <div class="button-viewMoreProducts">
+            <button class="viewMoreProducts">View more products</button>
+        </div>
+        <div class="footer-logo">
+            <div class="div-container">
+                <figure class="div-logo-figure">
+                    <img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-01.png" alt="">
+                    <figcaption class="div-logo-figure-figcaption"></figcaption>
+                </figure>        
+                <figure class="div-logo-figure">
+                    <img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-02.png" alt="">
+                    <figcaption class="div-logo-figure-figcaption"></figcaption>
+                </figure>        
+                <figure class="div-logo-figure">
+                    <img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-03.png" alt="">
+                    <figcaption class="div-logo-figure-figcaption"></figcaption>
+                </figure>        
+                <figure class="div-logo-figure">
+                    <img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-04.png" alt="">
+                    <figcaption class="div-logo-figure-figcaption"></figcaption>
+                </figure>        
+                <figure class="div-logo-figure">
+                    <img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-05.png" alt="">
+                    <figcaption class="div-logo-figure-figcaption"></figcaption>
+                </figure>        
+                <figure class="div-logo-figure">
+                    <img src="https://htmldemo.net/trio/trio/assets/img/brand-logo/brand-logo-06.png" alt="">
+                    <figcaption class="div-logo-figure-figcaption"></figcaption>
+                </figure>    
+            </div>
+        </div class="footer-logo">
     </main>
-
     <footer>
+        
     </footer>
+    
 </body>
 </html>

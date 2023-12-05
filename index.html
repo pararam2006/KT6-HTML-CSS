@@ -80,15 +80,18 @@
         }
 
         .bigContent figure figcaption h2{
-            font-size: 30px;
+            font-size: 40px;
             margin: 0;
             margin-bottom: -5px;
         }
+        .bigContent figure figcaption{
+            font-size: 20px;
+        }
 
         .bigContent figure figcaption{
-            margin-top: -31%;
+            margin-top: -27%;
             margin-left: 13%;
-            width: 200px;
+            width: 300px;
         }
 
         .item {
@@ -117,6 +120,7 @@
         }
         
         .categoty-banner-short {
+            overflow: hidden;
             width: 356px;
             height: 260px;
             /* border: solid 2px;
@@ -124,6 +128,7 @@
         }
 
         .categoty-banner-long-sale {
+            overflow: hidden;
             width: 300px;
             height: 534px;
             /* border: solid 2px;
@@ -140,7 +145,8 @@
             width: 40%;
             position: relative;
             top: -70%;
-            padding-left: 15px;
+            padding-left: 45px;
+            font-size: 20px;
         }
 
         .figcaption-right {
@@ -149,7 +155,9 @@
             width: 40%;
             left: 45%;
             top: -70%;
-            padding-left: 15px;
+            padding-left: 35px;
+            padding-top: 12px;
+            font-size: 20px;
         }
 
         .figcaption-sale {
@@ -182,6 +190,7 @@
             line-height: 65px;
             height: 65px;
             width: 65px;
+            margin-left: 35px;
         }
 
         .sale-badge1 {
@@ -189,13 +198,14 @@
             border-radius: 50%;
             color: #fff;
             display: block;
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 500;
             text-align: center;
             position: relative;
-            line-height: 40px;
-            height: 40px;
-            width: 40px;
+            line-height: 48px;
+            height: 50px;
+            width: 50px;
+            margin-left: 40px;
         }
 
         figure {
@@ -285,6 +295,14 @@
 
         .features-imgs figure{
             margin-right: 15px;
+        }
+        .features-imgs figure figcaption h3{
+            margin: 0px;
+            margin-bottom: -32px;   
+        }
+
+        .bi-heart {
+            padding-left: 90%;
         }
 
         .features-description {
@@ -404,6 +422,38 @@
             margin: 0;
             display: inline;
         }
+
+        .bigContent-button-shop {
+            font-weight: 700;
+        }
+
+        .bigContent-button-shop:hover, .category-anim:hover  {
+            color: #fdc657;
+            transition: 0.2s;
+        }
+
+        .figure-img {
+          transition: transform 0.3s ease;
+        }
+
+        .figure-img:hover {
+          transform: scale(1.1);
+        }
+
+        @keyframes changeColor {
+              0% { 
+                color: initial; 
+            }
+              100% { 
+                color: #fdc657; 
+            }
+        }
+
+        .figure-img:hover .category-anim {
+          animation: changeColor 0.3s forwards;
+        } 
+        /* посмотреть анимацию */
+
     </style>
 </head>
 <body>
@@ -432,11 +482,11 @@
         <div class="categoty-container">
             <figure class="categoty-banner-short">
                 <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-1.jpg" alt="">
-                <figcaption class="figcaption-left">Light Up!<p></p>19 рублей</figcaption>
+                <figcaption class="figcaption-left"><span class="category-anim">Light Up!</span><p></p>19 рублей</figcaption>
             </figure>
             <figure class="categoty-banner-short">
                 <img class="figure-img" src="	https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-2.jpg" alt="">
-                <figcaption class="figcaption-right">Hand Up!<p></p>19 рублей</figcaption>
+                <figcaption class="figcaption-right"><span class="category-anim">Hand Up!</span><p></p>19 рублей</figcaption>
             </figure>
             <figure class="categoty-banner-long-sale">
                 <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-5.jpg" alt="">
@@ -444,11 +494,11 @@
             </figure>
             <figure class="categoty-banner-short">
                 <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-3.jpg" alt="">
-                <figcaption class="figcaption-right">Women Up!<p></p>19 рублей</figcaption>
+                <figcaption class="figcaption-right"><span class="category-anim">Women Up!</span><p></p>19 рублей</figcaption>
             </figure>
             <figure class="categoty-banner-short">
                 <img class="figure-img" src="https://htmldemo.net/trio/trio/assets/img/shop-cate/shop-cate-4.jpg" alt="">
-                <figcaption class="figcaption-left">Wake Up!<p></p>19 рублей</figcaption>
+                <figcaption class="figcaption-left"><span class="category-anim">Wake Up!</span><p></p>19 рублей</figcaption>
                 <figcaption class="figcaption-sale1"><span class="sale-badge1">-30%</span></figcaption>
             </figure>
         </div>
@@ -461,12 +511,12 @@
             <div class="features-imgs">
                 <figure>
                     <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-03.jpg" alt="">
-                    <figcaption class="features-figure-figcaption">Bed lamp<p></p>19 рублей</figcaption>
+                    <figcaption class="features-figure-figcaption"> <h3>Bedroom decode</h3> <br> <i class="bi-heart"></i> <br>19 рублей</figcaption>
                 </figure>
            
                 <figure>
                     <img class="features-figure-img" src="https://htmldemo.net/trio/trio/assets/img/products/prod-04.jpg" alt="">
-                    <figcaption class="features-figure-figcaption"> Bedroom decode<p></p>19 рублей</figcaption>
+                    <figcaption class="features-figure-figcaption"> <h3>Bedroom decode</h3> <br> <i class="bi-heart"></i> <br>19 рублей</figcaption>
                 </figure>
             </div>
         </div>
